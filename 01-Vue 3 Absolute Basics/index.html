@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <p>
+        <input type="text" v-model="greeting" />
+      </p>
+      <p>
+        <strong>{{ greeting }} ({{ greeting.length }})</strong>
+      </p>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            greeting: "Hello Vue 3!!!",
+          };
+        },
+        mounted() {
+          setTimeout(() => {
+            this.greeting = "Hello Vue 3!!! (updated)";
+          }, 3000);
+        },
+      }).mount("#app");
+    </script>
+  </body>
 </html>
