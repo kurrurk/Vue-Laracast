@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="luxury">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="flex min-w-screen min-h-screen">
+    <div
+      id="app"
+      class="flex min-w-screen min-h-screen h-full w-full justify-center items-center"
+    >
+      <button :class="active ? 'text-red' : 'text-green'" @click="toggle">
+        Click Me!
+      </button>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            active: false,
+          };
+        },
+        methods: {
+          toggle() {
+            this.active = !this.active;
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
