@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake,
+    cyberpunk,
+    luxury;
+}
+
+.text-green {
+  @apply btn btn-lg btn-outline btn-success;
+}
+
+.text-red {
+  @apply btn btn-lg btn-outline btn-error;
+}

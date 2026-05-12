@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="luxury">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your First Custom Vue Component</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="grid h-full min-w-screen min-h-screen place-items-center">
+    <div id="app">
+      <app-button>Submit</app-button>
+      <app-button>Click Me</app-button>
+    </div>
+    <script>
+      let app = {
+        components: {
+          "app-button": {
+            template: `
+                <button class="btn btn-lg btn-outline m-1 disabled:pointer-events-auto disabled:cursor-not-allowed" :disabled="processing">
+                    <slot />    
+                </button>
+            `,
+            data() {
+              return {
+                processing: true,
+              };
+            },
+            // mounted() {
+            //   alert("Hello Button!");
+            // },
+          },
+          //   "assigments-list": {},
+          //   "assigments-list-item": {},
+          //   accordion: {},
+        },
+      };
+      Vue.createApp(app).mount("#app");
+    </script>
+  </body>
+</html>
