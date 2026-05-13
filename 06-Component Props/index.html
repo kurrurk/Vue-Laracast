@@ -1,27 +1,22 @@
 <!doctype html>
-<html lang="en" data-theme="luxury">
+<html lang="en" data-theme="coffee">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>One Vue Component Per File</title>
+    <title>Component Props</title>
     <script src="https://unpkg.com/vue@3"></script>
     <link href="./src/output.css" rel="stylesheet" />
   </head>
   <body class="grid h-full min-w-screen min-h-screen place-items-center">
     <div id="app">
       <app-button>Submit</app-button>
-      <app-button>Click Me</app-button>
+      <app-button buttonType="success">Click Me</app-button>
+      <app-button processing="true">Is loading...</app-button>
     </div>
     <script type="module">
-      import AppButton from "./js/components/AppButton.js";
+      import App from "./js/components/App.js";
 
-      let app = {
-        components: {
-          "app-button": AppButton,
-        },
-      };
-
-      Vue.createApp(app).mount("#app");
+      Vue.createApp(App).mount("#app");
     </script>
   </body>
 </html>
