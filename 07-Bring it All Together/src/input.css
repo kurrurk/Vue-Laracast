@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
+.text-green {
+  @apply btn btn-lg btn-outline btn-success;
+}
+
+.text-red {
+  @apply btn btn-lg btn-outline btn-error;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.is-loading {
+  @apply text-base-content/8;
+}
+
+.is-loading::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  animation: spinner 800ms ease infinite;
+}
