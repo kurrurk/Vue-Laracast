@@ -28,7 +28,7 @@ export default {
   },
   created() {
     fetch("http://localhost:3001/assignments")
-      .then((response) => res.json(response))
+      .then((response) => response.json())
       .then((data) => {
         this.assignments = data;
       });
