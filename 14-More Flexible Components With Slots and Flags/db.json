@@ -1,0 +1,22 @@
+{
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Finish Laracasts",
+      "complete": true,
+      "tag": "work"
+    },
+    {
+      "id": 2,
+      "name": "Go to the gym",
+      "complete": false,
+      "tag": "health"
+    },
+    {
+      "id": 3,
+      "name": "Make a cake",
+      "complete": false,
+      "tag": "home"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "npx serve & npx json-server --watch db.json --port 3001 & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.19",
+    "json-server": "^0.17.4"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}
